@@ -8,7 +8,7 @@ const dogDetailContainer = document.getElementById('dog-detail-container');
 // use the id to fetch the dog
 // render and append this dog's details to the container
 
-async function loadData() {
+async function fetchdog() {
     const params = new URLSearchParams(window.location.search);
 
     const dog = await getDog(params.get('id'));
@@ -18,4 +18,4 @@ async function loadData() {
     dogDetailContainer.append(div);
 }
 
-loadData();
+fetchdog();
